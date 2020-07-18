@@ -10,6 +10,7 @@
 		84A1E75024C0A49800E48383 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A1E74F24C0A49800E48383 /* main.cpp */; };
 		84A1E75824C0A9A200E48383 /* dynamic_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A1E75624C0A9A200E48383 /* dynamic_array.cpp */; };
 		84A1E75B24C0B89B00E48383 /* linked_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A1E75924C0B89B00E48383 /* linked_list.cpp */; };
+		84A1E75E24C2123600E48383 /* stacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A1E75C24C2123600E48383 /* stacks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		84A1E75724C0A9A200E48383 /* dynamic_array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dynamic_array.hpp; sourceTree = "<group>"; };
 		84A1E75924C0B89B00E48383 /* linked_list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = linked_list.cpp; sourceTree = "<group>"; };
 		84A1E75A24C0B89B00E48383 /* linked_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = linked_list.hpp; sourceTree = "<group>"; };
+		84A1E75C24C2123600E48383 /* stacks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stacks.cpp; sourceTree = "<group>"; };
+		84A1E75D24C2123600E48383 /* stacks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stacks.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				84A1E75724C0A9A200E48383 /* dynamic_array.hpp */,
 				84A1E75924C0B89B00E48383 /* linked_list.cpp */,
 				84A1E75A24C0B89B00E48383 /* linked_list.hpp */,
+				84A1E75C24C2123600E48383 /* stacks.cpp */,
+				84A1E75D24C2123600E48383 /* stacks.hpp */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A1E75E24C2123600E48383 /* stacks.cpp in Sources */,
 				84A1E75B24C0B89B00E48383 /* linked_list.cpp in Sources */,
 				84A1E75024C0A49800E48383 /* main.cpp in Sources */,
 				84A1E75824C0A9A200E48383 /* dynamic_array.cpp in Sources */,

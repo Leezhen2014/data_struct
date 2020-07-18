@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "dynamic_array.hpp"
+#include "linked_list.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -25,8 +26,18 @@ int main(int argc, const char * argv[]) {
     darray.toString();
     darray.remove(1);
     darray.toString();
-    
-    
+    std::cout<<"~~~~~~~~~~~~"<< std::endl;
+    LinkedList<int> llist;
+    llist.append(10);
+    llist.append(12);
+    llist.append(14);
+    llist.append(16);
+    llist.prepend(5);
+    llist.prepend(4);
+    llist.prepend(3);
+    llist.prepend(2);
+    llist.prepend(1);
+    llist.toString();
     return 0;
 }
 
