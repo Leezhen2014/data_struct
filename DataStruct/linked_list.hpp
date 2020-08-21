@@ -4,7 +4,14 @@
 //
 //  Created by admin on 2020/7/17.
 //  Copyright © 2020 liZ. All rights reserved.
-//  TODO1: 声明并且实现了一个类， 虽然可以完成一定的功能， 但最好不要这么做，尽量把实现和声明分开， 我们应该怎么去做？
+/**  TODO1: 声明并且实现了一个类， 虽然可以完成一定的功能， 但最好不要这么做，尽量把实现和声明分开， 我们应该怎么去做？PS: 这个是有模板的
+https://stackoverflow.com/questions/1724036/splitting-templated-c-classes-into-hpp-cpp-files-is-it-possible/1724632
+
+https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp
+ 
+ The common procedure in C++ is to put the class definition in a C++ header file and the implementation in a C++ source file. Then, the source file is made part of the project, meaning it is compiled separately. But when we implement this procedure for template classes, some compilation and linking problems will arise
+ 
+**/
 //  TODO2: 填充未实现的方法
 
 #ifndef linked_list_hpp
@@ -23,7 +30,7 @@ public:
     }
 };
 
-template <typename T > class LinkedList{
+template <class T > class LinkedList{
 private:
     int size_;
     Node<T> *head_ = NULL;
@@ -31,56 +38,11 @@ private:
     Node<T> *itr_ = NULL; // iterator
     
 public:
-    LinkedList(){
-        this->size_=0;
-    }
+    LinkedList();
     
-    void prepend(T value){
-        // check
-        if( this->head_ == NULL){
-            this->head_ = new Node<T>(value);
-            this->tail_ = this->head_;
-        }else{
-            // connect node in head
-            this->head_->previous = new Node<T>(value);
-            this->head_->previous->next = this->head_;
-            this->head_->previous->previous=NULL;
-            // move head
-            this->head_ = this->head_->previous;
-        }
-        this->size_+=1;
-    }
-    void append(T value){
-        if( this->head_ == NULL){
-            this->head_ = new Node<T>(value);
-            this->tail_ = this->head_;
-        }else{
-            // connect node in tail
-            this->tail_->next = new Node<T>(value);
-            this->tail_->next->previous = this->tail_;
-            this->tail_->next->next=NULL;
-            // move tail
-            this->tail_ = this->tail_->next;
-        }
-        this->size_ +=1;
-    }
-    void toString(){
-        Node<T>* tmp = this->head_;
-        std::cout << "[ " ;
-        if(this->size_ != 0 ){
-            // frist value
-            std::cout << tmp->value;
-            tmp = tmp->next;
-            // second --> tail_
-            for(int i=1; i< this->size_; i++){
-                std::cout << "," << tmp->value;
-                tmp = tmp->next;
-            }
-        }
-        std::cout << "] "<< std::endl ;
-        // free
-        free(tmp);
-    }
+    void prepend(T value);
+    void append(T value);
+    void toString();
     // get
     // set
     // insert

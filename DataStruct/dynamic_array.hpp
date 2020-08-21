@@ -23,9 +23,9 @@ public:
     DynamicArray();
     ~DynamicArray();
     int size();
-    int& operator[](int idx);
+    int& operator[](int idx); // 符号的重载
     void append(int value);
-    // 此处缺少deletef方法， 注意 codeStyle
+    // 此处缺少delete 方法， 注意 codeStyle
     int remove(int idx);
     void toString();
 };

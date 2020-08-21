@@ -9,6 +9,9 @@
 #include <iostream>
 #include "dynamic_array.hpp"
 #include "linked_list.hpp"
+#include "linked_list.cpp" // use template
+
+#include "queue.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -38,6 +41,20 @@ int main(int argc, const char * argv[]) {
     llist.prepend(2);
     llist.prepend(1);
     llist.toString();
+    
+    
+    std::cout << "~~~~~~ queue ~~~~~~~" <<std::endl;
+    
+    Queue queue(10);
+    queue.push(1);
+    queue.push(3);
+    queue.push(5);
+    
+    queue.toString();
+    std::cout << "peek:"<<queue.peek()<<std::endl;
+    int value = queue.pop();
+    std::cout << "pop :"<< value << std::endl;
+    queue.toString();
     return 0;
 }
 
